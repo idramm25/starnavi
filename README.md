@@ -1,8 +1,10 @@
 How to:
 
+   URL: 
+	localhost:8000/api/articles/
 
    Create Post:
-	curl -X POST -d "title=Hello world 3&description=HWDescription&body=HWBody&author_id=<author_id>"
+	curl -X POST -d "title=Hello world 3&description=HWDescription&body=HWBody&author_id=<author_id>" URL
 
 --------------------------------------------------------------------------**
 
@@ -17,7 +19,7 @@ How to:
 --------------------------------------------------------------------------**
 
    Modify Post:
-	curl -X PUT -d "author_id=1&title=NEW&description=NEW&body=NEW" localhost:8000/api/articles/
+	curl -X PUT -d "author_id=1&title=NEW&description=NEW&body=NEW" URL
 
 --------------------------------------------------------------------------**
 

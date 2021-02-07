@@ -1,2 +1,2 @@
-from .article import ArticleViewSet
-from .home import Home
+from .article import ArticleView, SingleArticleView
+from .home import test_view

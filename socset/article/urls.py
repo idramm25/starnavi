@@ -1,8 +1,20 @@
-from rest_framework.routers import DefaultRouter
-from .views import ArticleViewSet
+from django.urls import path
+
+from article.views import ArticleView, SingleArticleView
+from .views import test_view
 
 
-router = DefaultRouter()
-router.register(r'articles', ArticleViewSet, basename='user')
+app_name = "articles"
 
-urlpatterns = router.urls
+# app_name will help us do a reverse look-up latter.
+urlpatterns = [
+    path('articles/', ArticleView.as_view()),
+    path('articles/<int:pk>', SingleArticleView.as_view()),
+    path('', test_view, name="home"),
+
+]
+
+# urlpatterns = [
+#     path('home', Home.as_view(), name='home'),
+# ]
+
